@@ -19,8 +19,7 @@ col1, col2 = st.columns(2)
 def convert_image(img):
     buf = BytesIO()
     img.save(buf, format="PNG")
-    byte_im = buf.getvalue()
-    return byte_im
+    return buf.getvalue()
 
 # Package the transform into a function
 def fix_image(upload):
